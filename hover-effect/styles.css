@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.btn {
+  padding: 20px 40px;
+  font-size: 2rem;
+  background-color: transparent;
+  border: 2px solid tomato;
+  color: tomato;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 2s;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: tomato;
+  border-radius: 0 0 50% 50%;
+  height: 0;
+  z-index: -1;
+  transition: all 2s;
+}
+
+.btn:hover::before {
+  height: 200%;
+}
